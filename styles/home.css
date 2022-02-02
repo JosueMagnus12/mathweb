@@ -201,7 +201,7 @@ main {
 
 @media (orientation: landscape) {
     .page-header {
-        height: min(85vh, 500px);
+        height: 85vh;
     }
 }
 
