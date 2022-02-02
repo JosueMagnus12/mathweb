@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Easy and quick calculations on MathWeb">
+    <meta property="og:url" content="https://josuemagnus12.github.io/mathweb/">
+    <meta property="og:description"
+        content="MathWeb provides you with many math tools to do calculations in different areas of math.">
+    <meta property="og:image" content="https://josuemagnus12.github.io/webmath/images/home-shot.png">
+    <title>Mean Median Mode Calculator | MathWeb</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+    <link rel="manifest" href="./images/site.webmanifest">
+    <link rel="mask-icon" href="./images/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="./images/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="./images/browserconfig.xml">
+    <meta name="theme-color" content="#000000">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="/styles/footer-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500;700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script src="./scripts/header-app.js" defer></script>
+    <script src="./scripts/footer-app.js" defer></script>
+    <script src="./scripts/statistics-app.js" defer></script>
+    <script src="https://kit.fontawesome.com/150d9cdc3a.js" crossorigin="anonymous" defer></script>
+</head>
+
+<body>
+    <div class="header-wrap"></div>
+
+    <div class="container main-container">
+        <main>
+            <h1 class="title">Find the Mean, Median or Mode</h1>
+            <div class="flex-container">
+                <article class="calculator small-calc">
+                    <div class="container">
+                        <h2 class="subtitle">Mean</h2>
+                        <form action="#" method="get" class="calc-form">
+                            <div class="input-label-wrap">
+                                <label for="mean-data-set">Data set</label>
+                                <textarea id="mean-data-set" rows="1" placeholder="1,2,3,...,n"
+                                    maxlength="50"></textarea>
+                            </div>
+                        </form>
+                        <div class="result-wrap">
+                            <p class="result">
+                                Result: <span class="number" id="mean-result"></span>
+                            </p>
+                        </div>
+                        <div class="btn-wrap">
+                            <button class="btn" type="button" id="mean-calc-btn">Calculate</button>
+                            <button class="btn" type="button" id="mean-clear">Clear</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="calculator small-calc">
+                    <div class="container">
+                        <h2 class="subtitle">Median</h2>
+                        <form action="#" method="get" class="calc-form">
+                            <div class="input-label-wrap">
+                                <label for="median-data-set">Data set</label>
+                                <textarea id="median-data-set" rows="1" placeholder="1,2,3,...,n"
+                                    maxlength="50"></textarea>
+                            </div>
+                        </form>
+                        <div class="result-wrap">
+                            <p class="result">
+                                Result: <span class="number" id="median-result"></span>
+                            </p>
+                        </div>
+                        <div class="btn-wrap">
+                            <button class="btn" type="button" id="median-calc-btn">Calculate</button>
+                            <button class="btn" type="button" id="median-clear">Clear</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="calculator small-calc">
+                    <div class="container">
+                        <h2 class="subtitle">Mode</h2>
+                        <form action="#" method="get" class="calc-form">
+                            <div class="input-label-wrap">
+                                <label for="mode-data-set">Data set</label>
+                                <textarea id="mode-data-set" rows="1" placeholder="1,2,3,...,n"
+                                    maxlength="50"></textarea>
+                            </div>
+                        </form>
+                        <div class="result-wrap">
+                            <p class="result">
+                                Result: <span class="number" id="mode-result"></span>
+                            </p>
+                        </div>
+                        <div class="btn-wrap">
+                            <button class="btn" type="button" id="mode-calc-btn">Calculate</button>
+                            <button class="btn" type="button" id="mode-clear">Clear</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </main>
+    </div>
+    <footer></footer>
+</body>
+
+</html>

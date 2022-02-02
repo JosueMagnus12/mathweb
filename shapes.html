@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Easy and quick calculations on MathWeb">
+    <meta property="og:url" content="https://josuemagnus12.github.io/mathweb/">
+    <meta property="og:description"
+        content="MathWeb provides you with many math tools to do calculations in different areas of math.">
+    <meta property="og:image" content="https://josuemagnus12.github.io/webmath/images/home-shot.png">
+    <title>Geometric Calculator | MathWeb</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+    <link rel="manifest" href="./images/site.webmanifest">
+    <link rel="mask-icon" href="./images/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="./images/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="./images/browserconfig.xml">
+    <meta name="theme-color" content="#000000">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/footer-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500;700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script src="./scripts/shapes-app.js" defer></script>
+    <script src="./scripts/footer-app.js" defer></script>
+    <script src="./scripts/header-app.js" defer></script>
+    <script src="https://kit.fontawesome.com/150d9cdc3a.js" crossorigin="anonymous" defer></script>
+
+
+</head>
+
+<body>
+    <div class="header-wrap"></div>
+
+    <div class="container main-container">
+        <main>
+            <h1 class="title">Calculate areas and perimeters</h1>
+
+            <div class="flex-container">
+                <!-- Square -->
+                <article class="calculator">
+                    <div class="container">
+                        <h2 class="subtitle">Square</h2>
+                        <form action="#" method="get" class="calc-form">
+                            <div class="input-label-wrap">
+                                <label for="square-length">Length</label>
+                                <input type="number" id="square-length">
+                            </div>
+
+                            <div class="input-label-wrap">
+                                <label for="sqr-length-units">Unit</label>
+                                <select id="sqr-length-units" class="units">
+                                    <option value="cm">cm</option>
+                                    <option value="in">in</option>
+                                    <option value="m">m</option>
+                                    <option value="ft">ft</option>
+                                </select>
+                            </div>
+                        </form>
+
+                        <div class="result-wrap">
+                            <p class="result">
+                                Area: <span class="number" id="square-area"></span><sup class="power"
+                                    id="sqr-power"></sup>
+                            </p>
+                            <p class="result">
+                                Perimeter: <span class="number" id="square-perimeter"></span>
+                            </p>
+                        </div>
+
+                        <div class="btn-wrap">
+                            <button class="btn" type="button" id="sqr-calc-btn">Calculate</button>
+                            <button class="btn" type="button" id="sqr-clear">Clear</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Triangle -->
+                <article class="calculator">
+                    <div class="container">
+                        <h2 class="subtitle">Triangle</h2>
+                        <form action="#" method="get" class="calc-form many-inputs">
+                            <div class="input-label-wrap">
+                                <label for="tri-side-a">Side A</label>
+                                <input type="number" id="tri-side-a">
+                            </div>
+
+                            <div class="input-label-wrap last">
+                                <label for="tri-length-units">Unit</label>
+                                <select id="tri-length-units" class="units">
+                                    <option value="cm">cm</option>
+                                    <option value="in">in</option>
+                                    <option value="m">m</option>
+                                    <option value="ft">ft</option>
+                                </select>
+                            </div>
+
+                            <div class="input-label-wrap">
+                                <label for="tri-side-b">Side B</label>
+                                <input type="number" id="tri-side-b">
+                            </div>
+
+                            <div class="input-label-wrap">
+                                <label for="tri-base">Base</label>
+                                <input type="number" id="tri-base">
+                            </div>
+
+                            <div class="input-label-wrap">
+                                <label for="tri-height">Height</label>
+                                <input type="number" id="tri-height">
+                            </div>
+                        </form>
+
+                        <div class="result-wrap">
+                            <p class="result">
+                                Area: <span class="number" id="tri-area"></span><sup class="power" id="tri-power"></sup>
+                            </p>
+                            <p class="result">
+                                Perimeter: <span class="number" id="tri-perimeter"></span>
+                            </p>
+                        </div>
+
+                        <div class="btn-wrap">
+                            <button class="btn" type="button" id="tri-calc-btn">Calculate</button>
+                            <button class="btn" type="button" id="tri-clear">Clear</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Circle -->
+                <article class="calculator">
+                    <div class="container">
+                        <h2 class="subtitle">Circle</h2>
+                        <form action="#" method="get" class="calc-form">
+                            <div class="input-label-wrap">
+                                <label for="cir-radius">Radius</label>
+                                <input type="number" id="cir-radius">
+                            </div>
+
+                            <div class="input-label-wrap">
+                                <label for="cir-radius-units">Unit</label>
+                                <select id="cir-radius-units" class="units">
+                                    <option value="cm">cm</option>
+                                    <option value="in">in</option>
+                                    <option value="m">m</option>
+                                    <option value="ft">ft</option>
+                                </select>
+                            </div>
+                        </form>
+
+                        <div class="result-wrap">
+                            <p class="result">
+                                Area: <span class="number" id="circle-area"></span><sup class="power"
+                                    id="cir-power"></sup>
+                            </p>
+                            <p class="result">
+                                Circumference: <span class="number" id="circle-circum"></span>
+                            </p>
+                        </div>
+
+                        <div class="brn-wrap">
+                            <button class="btn" type="button" id="cir-calc-btn">Calculate</button>
+                            <button class="btn" type="button" id="cir-clear">Clear</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </main>
+    </div>
+    <footer></footer>
+</body>
+
+</html>

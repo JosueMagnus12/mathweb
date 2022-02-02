@@ -1,0 +1,256 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    --mono-font: 'Roboto Mono', monospace;
+    --roboto-font: 'Roboto', sans-serif;
+    --header-back-color: #0088DC;
+    --header-text-color: white;
+    --shadow-black: rgb(0 0 0 / .255);
+    --main-text-color: rgb(0 0 0 / .85);
+    --btn-back-color: #38b000;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.hide {
+    overflow: hidden;
+}
+
+.page-header {
+    height: min(60vh, 350px);
+
+    font-family: var(--roboto-font);
+
+    background-color: var(--header-back-color);
+    color: var(--header-text-color);
+}
+
+.container {
+    width: min(90%, 1100px);
+    height: 100%;
+    margin: 0 auto;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.hamburger {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+
+    padding: .25em .5em;
+    border: none;
+
+    font-size: 2.6rem;
+
+    background-color: var(--header-back-color);
+    color: var(--header-text-color);
+    border-radius: 50%;
+}
+
+.hamburger:hover {
+    cursor: pointer;
+}
+
+.header-nav {
+    position: absolute;
+    inset: 0 0 auto 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    height: 100vh;
+
+    transform-origin: center left;
+    transform: translateX(-100%);
+    transition: transform 300ms;
+
+    background-color: var(--header-text-color);
+}
+
+.open {
+    transform: translateX(0);
+}
+
+.nav-top {
+    background-color: var(--header-back-color);
+}
+
+.nav-top-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 90%;
+    padding: .5em 0;
+    margin: 0 auto;
+}
+
+.nav-top-logo {
+    width: min(20%, 70px);
+    height: auto;
+}
+
+.exit-btn {
+    padding: .25em .5em;
+    border: none;
+
+    font-size: 2.4rem;
+
+    background-color: inherit;
+    color: var(--header-text-color);
+    border-radius: 50%;
+}
+
+.header-link {
+    padding: 1em 0 .75em 1.5em;
+    border-bottom: 1px solid var(--shadow-black);
+
+    font-family: var(--mono-font);
+    font-size: clamp(1.6rem, 3vw, 2rem);
+    font-weight: 700;
+    text-decoration: none;
+
+    color: var(--header-back-color);
+}
+
+.header-logo {
+    width: min(25%, 100px);
+    height: auto;
+}
+
+.welcome-wrap {
+    width: 80%;
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.header-title {
+    margin: 0;
+
+    font-size: clamp(3.2rem, 10vw, 4.8rem);
+    font-weight: 700;
+}
+
+.header-description {
+    font-size: clamp(1.8rem, 5vw, 2.2rem);
+}
+
+main {
+    padding: 0 0 50px;
+
+    font-family: var(--roboto-font);
+
+    color: var(--main-text-color);
+}
+
+.calculator-introduction,
+.page-introduction {
+    margin: 3em 0;
+
+    text-align: center;
+}
+
+.subtitle {
+    margin: 0 0 15px 0;
+
+    font-family: var(--mono-font);
+    font-size: clamp(2.8rem, 4vw, 3.2rem);
+    font-weight: 700;
+}
+
+.page-introduction .subtitle {
+    font-size: clamp(3.2rem, 4vw, 3.6rem);
+}
+
+.img-exhib {
+    width: min(35vw, 170px);
+    height: auto;
+}
+
+
+.exhib-description,
+.page-introduction-text {
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+}
+
+.exhib-btn {
+    padding: .25em 2em;
+
+    font-family: var(--mono-font);
+    font-size: 1.6rem;
+    text-decoration: none;
+
+    background-color: var(--btn-back-color);
+    color: var(--header-text-color);
+    border-radius: 3px;
+}
+/*Header*/
+@media (min-width: 700px) {
+    .hamburger {
+        display: none;
+    }
+
+    .header-nav {
+        position: initial;
+
+        flex-direction: row;
+        justify-content: space-between;
+
+        width: 70%;
+        height: auto;
+        margin: 0 auto;
+
+        transition: none;
+        transform: translateX(0);
+
+        background-color: var(--header-back-color);
+    }
+
+    .nav-top {
+        display: none;
+    }
+
+    .header-link {
+        padding: 0;
+        border: none;
+
+        color: var(--header-text-color);
+    }
+}
+/*Main*/
+@media (min-width: 700px) {
+    main {
+        margin-top: 30px;
+    }
+
+    .calculator-introduction {
+        align-self: flex-end;
+        width: calc(100% - 200px);
+
+        text-align: left;
+    }
+
+    .calculator-introduction .column {
+        align-items: flex-start;
+    }
+
+    .img-exhib {
+        position: absolute;
+
+        transform: translateX(-110%);
+    }
+}

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="800"
+   height="800"
+   viewBox="0 0 800 800"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (26b7af14f2, 2022-01-19)"
+   sodipodi:docname="percentages.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
+     showgrid="false"
+     width="800px"
+     inkscape:zoom="0.48"
+     inkscape:cx="319.79167"
+     inkscape:cy="392.70833"
+     inkscape:window-width="1294"
+     inkscape:window-height="704"
+     inkscape:window-x="72"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <rect
+       x="79.103788"
+       y="323.90874"
+       width="327.834"
+       height="204.18599"
+       id="rect21415" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <circle
+       style="fill:#64dfdf;stroke-width:20;fill-opacity:1;stroke:#5390d9;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path31"
+       cx="400"
+       cy="400"
+       r="375" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:326.437px;line-height:1.25;font-family:Catamaran;-inkscape-font-specification:'Catamaran Bold';fill:#5390d9;fill-opacity:1;stroke-width:2.26692"
+       x="119.12188"
+       y="451.27588"
+       id="text4278"><tspan
+         sodipodi:role="line"
+         id="tspan4276"
+         x="119.12188"
+         y="451.27588"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Catamaran;-inkscape-font-specification:'Catamaran Bold';fill:#5390d9;fill-opacity:1;stroke-width:2.26692">%</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:316.656px;line-height:1.25;font-family:Catamaran;-inkscape-font-specification:'Catamaran Bold';stroke-width:7.91641;fill:#5390d9;fill-opacity:1"
+       x="468.70712"
+       y="580.96747"
+       id="text17397"><tspan
+         sodipodi:role="line"
+         id="tspan17395"
+         x="468.70712"
+         y="580.96747"
+         style="stroke-width:7.91641;fill:#5390d9;fill-opacity:1">$</tspan></text>
+    <text
+       xml:space="preserve"
+       id="text21413"
+       style="line-height:1.25;font-family:sans-serif;font-size:40px;white-space:pre;shape-inside:url(#rect21415)" />
+  </g>
+</svg>

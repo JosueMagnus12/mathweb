@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Easy and quick calculations on MathWeb">
+    <meta property="og:url" content="https://josuemagnus12.github.io/mathweb/">
+    <meta property="og:description"
+        content="MathWeb provides you with many math tools to do calculations in different areas of math.">
+    <meta property="og:image" content="https://josuemagnus12.github.io/webmath/images/home-shot.png">
+    <title>Discounts Calculator | MathWeb</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+    <link rel="manifest" href="./images/site.webmanifest">
+    <link rel="mask-icon" href="./images/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="./images/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="./images/browserconfig.xml">
+    <meta name="theme-color" content="#000000">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/footer-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500;700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script src="./scripts/header-app.js" defer></script>
+    <script src="./scripts/footer-app.js" defer></script>
+    <script src="./scripts/discounts-app.js" defer></script>
+    <script src="https://kit.fontawesome.com/150d9cdc3a.js" crossorigin="anonymous" defer></script>
+</head>
+
+<body>
+    <div class="header-wrap"></div>
+    <div class="container main-container">
+        <main>
+            <h1 class="title">Get the real price of something</h1>
+            <div class="flex-container">
+                <article class="calculator small-calc single-calc">
+                    <div class="container">
+                        <h2 class="subtitle">Get price</h2>
+                        <form action="#" method="get" class="calc-form many-inputs">
+                            <div class="input-label-wrap">
+                                <label for="price">Price</label>
+                                <input type="number" id="price" />
+                            </div>
+
+                            <div class="input-label-wrap">
+                                <label for="currency">Currency</label>
+                                <select id="currency">
+                                    <option value="USD">USD</option>
+                                    <option value="EURO">EUR</option>
+                                    <option value="MXN">MXN</option>
+                                </select>
+                            </div>
+
+                            <div class="input-label-wrap">
+                                <label for="discount">Discount %</label>
+                                <input type="number" id="discount" />
+                            </div>
+                        </form>
+
+                        <div class="result-wrap">
+                            <p class="result">
+                                Final price: <span class="number" id="disc-result"></span>
+                            </p>
+                        </div>
+
+                        <div class="btn-wrap">
+                            <button type="button" class="btn" id="disc-calc">Calculate</button>
+                            <button type="button" class="btn" id="disc-clear">Clear</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </main>
+    </div>
+    <footer></footer>
+</body>
+
+</html>
