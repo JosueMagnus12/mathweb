@@ -23,7 +23,7 @@ body {
 }
 
 .page-header {
-    height: min(60vh, 350px);
+    height: min(60vh, 500px);
 
     font-family: var(--roboto-font);
 
@@ -198,6 +198,13 @@ main {
     color: var(--header-text-color);
     border-radius: 3px;
 }
+
+@media (orientation: landscape) {
+    .page-header {
+        height: min(85vh, 500px);
+    }
+}
+
 /*Header*/
 @media (min-width: 700px) {
     .hamburger {
