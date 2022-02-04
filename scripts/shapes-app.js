@@ -1,9 +1,25 @@
-//ROunds a number to 2 decimal places
+//Rounds a number to 2 decimal places
 const roundNumber = (number) => {
     const product = number * 100;
     const wholeNumber = Math.round(product);
     const roundedNumber = wholeNumber / 100;
     return roundedNumber;
+};
+
+const writeResults = (area, perimeter, displayElem, lengthUnits) => {
+    displayElem[0].textContent = area + lengthUnits.value;
+    displayElem[1].textContent = "2";
+    displayElem[2].textContent = perimeter + lengthUnits.value;
+};
+//Closure to clear a calculator
+const singleSideShapeClearer = (side, lengthUnits, area, power, perimeter) => {
+    return () => {
+        side.value = "";
+        lengthUnits.value = "cm";
+        area.innerText = "";
+        power.innerText = "";
+        perimeter.innerText = "";
+    };
 };
 
 //Square
@@ -25,12 +41,6 @@ const squareArea = (side) => {
     return area;
 };
 
-const writeSqrResults = (area, perimeter) => {
-    sqrAreaResult.textContent = area + squareLengthUnits.value;
-    sqrPower.textContent = "2";
-    sqrPerResult.textContent = perimeter + squareLengthUnits.value;
-};
-
 squareButton.onclick = () => {
     const sqrSideLength = squareLength.value;
 
@@ -41,17 +51,19 @@ squareButton.onclick = () => {
         const sqrPeri = squarePerimeter(sqrSideLength);
         const roundedPeri = roundNumber(sqrPeri);
 
-        writeSqrResults(roundedArea, roundedPeri);
+        writeResults(roundedArea,
+            roundedPeri,
+            [sqrAreaResult, sqrPower, sqrPerResult],
+            squareLengthUnits);
     }
 };
 
-sqrClearButton.onclick = () => {
-    squareLength.value = "";
-    squareLengthUnits.value = "cm";
-    sqrAreaResult.textContent = "";
-    sqrPerResult.textContent = "";
-    sqrPower.textContent = "";
-};
+sqrClearButton.onclick = singleSideShapeClearer(
+    squareLength,
+    squareLengthUnits,
+    sqrAreaResult,
+    sqrPower,
+    sqrPerResult);
 
 //Triangle
 const triSideA = document.querySelector("#tri-side-a");
@@ -75,12 +87,6 @@ const triangleArea = (base, height) => {
     return area;
 };
 
-const writeTriResults = (area, perimeter) => {
-    triAreaResult.textContent = area + triLengthUnits.value;
-    triPower.textContent = "2";
-    triPerResult.textContent = perimeter + triLengthUnits.value;
-};
-
 triButton.onclick = () => {
     const triMeasures = [
         Number(triSideA.value),
@@ -97,7 +103,10 @@ triButton.onclick = () => {
         const triPeri = trianglePerimeter(triMeasures[0], triMeasures[1], triMeasures[2]);
         const roundedPeri = roundNumber(triPeri);
 
-        writeTriResults(roundedArea, roundedPeri);
+        writeResults(roundedArea,
+            roundedPeri,
+            [triAreaResult, triPower, triPerResult],
+            triLengthUnits);
     }
 };
 
@@ -132,12 +141,6 @@ const circleArea = (radius) => {
     return area;
 };
 
-const writeCirResults = (area, perimeter) => {
-    cirAreaResult.textContent = area + radiusUnits.value;
-    cirPower.textContent = "2";
-    cirCircumResult.textContent = perimeter + radiusUnits.value;
-};
-
 cirButton.onclick = () => {
     const cirRadius = radius.value;
 
@@ -148,14 +151,16 @@ cirButton.onclick = () => {
         const cirCircum = circleCircumference(cirRadius);
         const roundedCircum = roundNumber(cirCircum);
 
-        writeCirResults(roundedArea, roundedCircum);
+        writeResults(roundedArea,
+            roundedCircum,
+            [cirAreaResult, cirPower, cirCircumResult],
+            radiusUnits);
     }
 };
 
-cirClearButton.onclick = () => {
-    radius.value = "";
-    radiusUnits.value = "cm";
-    cirAreaResult.textContent = "";
-    cirCircumResult.textContent = "";
-    cirPower.textContent = "";
-};
+cirClearButton.onclick = singleSideShapeClearer(
+    radius,
+    radiusUnits,
+    cirAreaResult,
+    cirPower,
+    cirCircumResult);
