@@ -11,6 +11,26 @@ const validateSet = (userInput, regularEx) => {
         return dataSet.map(num => Number(num));
     }
 };
+//closure for clear btn
+const makeClearer = (input, display) => {
+    return () => {
+        input.value = "";
+        display.innerText = "";
+    }
+};
+//closure for calc btn
+const makeCalcLogic = (input, regularExpression, display, calcFn, validationFn) => {
+    return () => {
+        const nums = validationFn(input, regularExpression);
+
+        if (!nums) {
+            display.innerText = 'Invalid set'
+        }
+        else {
+            display.innerText = calcFn(nums);
+        }
+    };
+};
 
 //MEAN
 const meanSet = document.querySelector("#mean-data-set");
@@ -26,21 +46,9 @@ const calculateMean = (array) => {
     return roundedAverage;
 };
 
-meanCalcBtn.onclick = () => {
-    const nums = validateSet(meanSet, regex);
+meanCalcBtn.onclick = makeCalcLogic(meanSet, regex, meanResult, calculateMean, validateSet);
 
-    if (!nums) {
-        meanResult.innerText = 'Invalid set'
-    }
-    else {
-        meanResult.innerText = calculateMean(nums);
-    }
-};
-
-meanClear.onclick = () => {
-    meanSet.value = "";
-    meanResult.innerText = "";
-};
+meanClear.onclick = makeClearer(meanSet, meanResult);
 
 //MEDIAN
 const medianSet = document.querySelector("#median-data-set");
@@ -64,21 +72,9 @@ const calculateMedian = (array) => {
     }
 };
 
-medianCalcBtn.onclick = () => {
-    const nums = validateSet(medianSet, regex);
+medianCalcBtn.onclick = makeCalcLogic(medianSet, regex, medianResult, calculateMedian, validateSet);
 
-    if (!nums) {
-        medianResult.innerText = 'Invalid set'
-    }
-    else {
-        medianResult.innerText = calculateMedian(nums);
-    }
-};
-
-medianClear.onclick = () => {
-    medianSet.value = "";
-    medianResult.innerText = "";
-};
+medianClear.onclick = makeClearer(medianSet, medianResult);
 
 //MODE
 const modeSet = document.querySelector("#mode-data-set");
@@ -138,18 +134,6 @@ const calculateMode = (array) => {
 
 };
 
-modeCalcBtn.onclick = () => {
-    const nums = validateSet(modeSet, regex);
+modeCalcBtn.onclick = makeCalcLogic(modeSet, regex, modeResult, calculateMode, validateSet);
 
-    if (!nums) {
-        modeResult.innerText = 'Invalid set'
-    }
-    else {
-        modeResult.innerText = calculateMode(nums);
-    }
-};
-
-modeClear.onclick = () => {
-    modeSet.value = "";
-    modeResult.innerText = "";
-};
+modeClear.onclick = makeClearer(modeSet, modeResult);
