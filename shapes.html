@@ -26,7 +26,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500;700&family=Roboto:wght@400;700&display=swap"
         rel="stylesheet">
-    <script src="./scripts/shapes-app.js" defer></script>
+    <script src="./scripts/geometry/shapes-app.js" type="module" defer></script>
+    <script src="./scripts/geometry/geometric-shapes.js" type="module" defer></script>
+    <script src="./scripts/geometry/geometric-calc.js" type="module" defer></script>
     <script src="./scripts/footer-app.js" defer></script>
     <script src="./scripts/header-app.js" defer></script>
     <script src="https://kit.fontawesome.com/150d9cdc3a.js" crossorigin="anonymous" defer></script>
@@ -49,7 +51,7 @@
                         <form action="#" method="get" class="calc-form">
                             <div class="input-label-wrap">
                                 <label for="square-length">Length</label>
-                                <input type="number" id="square-length">
+                                <input type="number" class="sqr-area-side sqr-perimeter-side">
                             </div>
 
                             <div class="input-label-wrap">
@@ -87,7 +89,7 @@
                         <form action="#" method="get" class="calc-form many-inputs">
                             <div class="input-label-wrap">
                                 <label for="tri-side-a">Side A</label>
-                                <input type="number" id="tri-side-a">
+                                <input type="number" class="tri-perimeter-side">
                             </div>
 
                             <div class="input-label-wrap last">
@@ -102,26 +104,27 @@
 
                             <div class="input-label-wrap">
                                 <label for="tri-side-b">Side B</label>
-                                <input type="number" id="tri-side-b">
+                                <input type="number" class="tri-perimeter-side">
                             </div>
 
                             <div class="input-label-wrap">
                                 <label for="tri-base">Base</label>
-                                <input type="number" id="tri-base">
+                                <input type="number" class="tri-perimeter-side tri-area-side">
                             </div>
 
                             <div class="input-label-wrap">
                                 <label for="tri-height">Height</label>
-                                <input type="number" id="tri-height">
+                                <input type="number" class="tri-area-side">
                             </div>
                         </form>
 
                         <div class="result-wrap">
                             <p class="result">
-                                Area: <span class="number" id="tri-area"></span><sup class="power" id="tri-power"></sup>
+                                Area: <span class="number" id="triangle-area"></span><sup class="power"
+                                    id="tri-power"></sup>
                             </p>
                             <p class="result">
-                                Perimeter: <span class="number" id="tri-perimeter"></span>
+                                Perimeter: <span class="number" id="triangle-perimeter"></span>
                             </p>
                         </div>
 
@@ -139,7 +142,7 @@
                         <form action="#" method="get" class="calc-form">
                             <div class="input-label-wrap">
                                 <label for="cir-radius">Radius</label>
-                                <input type="number" id="cir-radius">
+                                <input type="number" class="cir-area-side cir-perimeter-side">
                             </div>
 
                             <div class="input-label-wrap">
